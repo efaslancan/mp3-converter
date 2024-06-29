@@ -3,19 +3,13 @@ const ytdl = require('ytdl-core');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
 
-
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.send(`
-    <form action="/convert" method="post">
-      <input type="text" name="videoUrl" placeholder="YouTube video URL">
-      <input type="submit" value="Convert to MP3">
-    </form>
-  `);
+  res.sendFile(__dirname + "/index.html")
 });
-  
+
 app.post('/convert', (req, res) => {
     const videoUrl = req.body.videoUrl;
     const outputPath = 'output.mp3';
