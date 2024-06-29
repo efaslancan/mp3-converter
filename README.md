@@ -9,6 +9,11 @@
 
 -paste a yt video link
 
--hit convert button
+-hit the convert button
 
 -download should start after couple of seconds depending on the length of the video
+
+<h3>Docker reporsitory link:</h3>
+https://hub.docker.com/r/efaslancan/mp3-converter
+
+You can follow the instructions on docker repository to run this app. 
