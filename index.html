@@ -9,8 +9,21 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: #f0f0f0;
+    }
+
+    .background-image {
+      width: 80vw; /* 50% of the viewport width */
+      height: 80vh; /* 50% of the viewport height */
+      background-image: url('asd1.jpeg'); /* Ensure this is the correct path */
+      background-size: contain; /* Ensures the image is fully visible */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-position: center; /* Centers the background image */
     }
 
     h1 {
@@ -63,10 +76,12 @@
   </style>
 </head>
 <body>
-  <h1>YouTube to MP3 Converter by efaslancan</h1>
-  <form action="/convert" method="post">
-    <input type="text" name="videoUrl" placeholder="YouTube video URL">
-    <input type="submit" value="Convert to MP3">
-  </form>
+  <div class="background-image">
+    <h1>YouTube to MP3 Converter by efaslancan</h1>
+    <form action="/convert" method="post">
+      <input type="text" name="videoUrl" placeholder="YouTube video URL">
+      <input type="submit" value="Convert to MP3">
+    </form>
+  </div>
 </body>
 </html>
